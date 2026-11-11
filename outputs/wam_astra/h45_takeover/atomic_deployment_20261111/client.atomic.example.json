@@ -1,0 +1,21 @@
+{
+  "unitree_url": "http://127.0.0.1:57077",
+  "policy_url": "ws://127.0.0.1:48833",
+  "token_file": "REPLACE_WITH_LOCAL_TOKEN_FILE",
+  "p450_bridge_path": "/home/ROBOT_USER/astra_h45_release/p450/p450_online_h45.py",
+  "aircraft": {
+    "p450_host": "REPLACE_WITH_P450_HOST",
+    "p450_known_host": null,
+    "p450_key": "REPLACE_WITH_LOCAL_SSH_KEY",
+    "ask_p450_password": false,
+    "site_config": "/home/ROBOT_USER/astra_h45_release/p450/site.atomic.json",
+    "tracking_error_m": 0.5,
+    "site_confirmed": false,
+    "ground_start": true,
+    "live_observations": true,
+    "no_speed_limit": true
+  },
+  "no_speed_limit": true,
+  "checkpoint_step": 20000,
+  "dog_config": "/home/ROBOT_USER/astra_h45_release/real_robot/config/unitree.atomic.json"
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wam-astra"
+version = "0.1.0"
+description = "Provenance-preserving Piper demonstration retrieval and shadow action review"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2", "Pillow>=10", "mcap>=1.6", "lz4>=4", "zstandard>=0.21", "scikit-learn>=1.5", "jsonschema>=4.23"]
+
+[project.optional-dependencies]
+runtime = ["torch>=2.7"]
+hardware = ["python-can==4.6.1"]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

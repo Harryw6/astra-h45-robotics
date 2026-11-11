@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_policy": "Pinned local upstream copies; adapters do not modify upstream source or download during execution.",
+  "repositories": [
+    {"name": "RoboICL", "url": "https://github.com/Mosi-AI/RoboICL", "commit": "629290545af0d139a955a6555dedd651a60f3db9", "local": "work/upstream/RoboICL", "executed": ["roboicl/policy/action_feedback.py"]},
+    {"name": "GPT-Policy", "url": "https://github.com/cheng-haha/GPT-Policy", "commit": "2ca201638e1139fe35973c8a2d209a894b389db1", "local": "work/upstream/GPT-Policy", "executed": ["src/gpt_policy/input/demonstration.py", "src/gpt_policy/input/action_sampling.py", "src/gpt_policy/harness/input_content.py", "src/gpt_policy/harness/codex.py", "src/gpt_policy/harness/providers/codex.py", "src/gpt_policy/harness/usage.py"]},
+    {"name": "VLA-Corrector", "url": "https://github.com/ZJU-OmniAI/vla-corrector", "commit": "927a06da8f00d7df483459e9039219e076c846de", "local": "work/upstream/vla-corrector", "executed": ["src/siglip_dynamics/inference/circuit_breaker.py"]},
+    {"name": "LeRobot", "url": "https://github.com/huggingface/lerobot", "commit": "d490e472a5d1a207cfe0255caaaf74b6d66e4656", "local": "work/upstream/lerobot", "executed": ["src/lerobot/configs/types.py", "src/lerobot/policies/rtc/configuration_rtc.py", "src/lerobot/policies/rtc/action_queue.py"]},
+    {"name": "Piper SDK", "url": "https://github.com/agilexrobotics/piper_sdk", "commit": "081e7c588e5b79eeaefa67a0469bcc701c81014f", "tag": "0.6.1", "local": "work/upstream/piper_sdk", "executed": ["piper_sdk/protocol/protocol_v2/piper_protocol_v2.py", "piper_sdk/piper_msgs/msg_v2"], "execution_scope": "passive native decoding of test CAN frames; no SDK interface constructor or hardware connection", "canonical_lf_source_sha256": "920774da43c0a5ed614f57173bf9e8b918b86c5b798e01665946827ed6e59471"}
+  ],
+  "local_glue": ["read-only source schema and timestamp adapters", "MCAP/Pillow image extraction", "SQLite/scikit-learn retrieval", "native input namespace adapter", "unit/time/numeric validation", "task memory and provisional model-review notes", "configured action-stream gates and symbolic handoff", "native harness launch and archival", "shadow coordinator and provenance"],
+  "not_implemented_or_verified": ["RoboDojo-native bimanual HDF5 conversion", "Piper FK or end-effector pose synthesis", "trained visual dynamics model", "compatible VLA native RTC sampler/checkpoint", "live motor transport or grasp correction performance"]
+}
